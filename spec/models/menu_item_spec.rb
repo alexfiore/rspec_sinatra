@@ -8,10 +8,14 @@ describe MenuItem do
   end
 
   context "associations" do
-    it { pending }
+    it { should belong_to(:menu) }
   end
 
   context "#name" do
-    it { pending }
+    let(:menu_item) {MenuItem.new(:name => "burger")}
+    it "returns the name" do
+      expect(menu_item.name).to eq "burger"
+    end
   end
 end
+

@@ -14,13 +14,15 @@ describe "Menus Controller", :type => :controller do
 
   context "create menu" do
     it "creates a menu with valid attributes" do
-      pending
+      let!(:yummenu) {:name => menu.name, :description => menu.description, :start_at => menu.start_at }
+      post "/menus", yummenu
+      expect{}
     end
     it "doesn't create a menu with invalid attributes" do
-      pending
+      expect(menu.errors)
     end
     it "shows errors" do
-      pending
+      expect()
     end
   end
 
